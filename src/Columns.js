@@ -1,13 +1,14 @@
 import type { ColumnsType } from "antd/lib/table";
+import { Badge } from "antd";
 import OpenModal from "./Modal";
 
 const styles = {
     border: "1px solid #cdcdcd",
     borderRadius: "50%",
-    padding: '5px 15px',
-    display: 'inline-block',
-    fontSize: '20px',
-    margin: "3px"
+    padding: "5px 15px",
+    display: "inline-block",
+    fontSize: "20px",
+    margin: "3px",
 };
 
 interface DataType {
@@ -30,10 +31,21 @@ const columns: ColumnsType<DataType> = [
         title: "Ngày xổ",
         dataIndex: "openTime",
         key: "openTime",
-        render: (openTime) =>
-            ("0" + openTime.getDate()).slice(-2) +
-            "/" +
-            ("0" + (openTime.getMonth() + 1)).slice(-2),
+        render: (_, { openTime }) => (
+            <>
+                <Badge
+                    size="default"
+                    count={
+                        ("0" + openTime.getDate()).slice(-2) +
+                        "/" +
+                        ("0" + (openTime.getMonth() + 1)).slice(-2)
+                    }
+                    style={{
+                        backgroundColor: "#52c41a",
+                    }}
+                />
+            </>
+        ),
     },
     {
         title: "Lượt xổ",
@@ -47,7 +59,11 @@ const columns: ColumnsType<DataType> = [
         render: (_, { openNum }) => (
             <>
                 {openNum?.split(",").map((item, i) => {
-                    return <span style={styles} key={i}>{item}</span>;
+                    return (
+                        <span style={styles} key={i}>
+                            {item}
+                        </span>
+                    );
                 })}
             </>
         ),
