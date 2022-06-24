@@ -8,7 +8,7 @@ const ket_qua_styles = {
     padding: "3px 18px",
     fontSize: "24px",
     display: "inline-block",
-    margin: "5px",
+    margin: "3px",
 };
 
 const columns = [

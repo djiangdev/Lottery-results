@@ -35,11 +35,11 @@ const OpenModal = (props) => {
                 onCancel={handleCancel}
                 width={800}
             >
-                <p>
+                <h2>
                     Ngày xổ: <strong>{OpenTime}</strong>
                     <br />
                     Lượt xổ: <strong>{TurnNum}</strong>
-                </p>
+                </h2>
                 <Details details={Detail} />
             </Modal>
         </>
