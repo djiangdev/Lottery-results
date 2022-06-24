@@ -1,11 +1,12 @@
 import { Table } from "antd";
 
 const styles = {
-    borderBottom: "2px solid #cdcdcd",
-    borderRight: "2px solid #cdcdcd",
+    borderBottom: "1px solid #cdcdcd",
+    borderRight: "1px solid #cdcdcd",
+    borderLeft: "1px solid #f1f1f1",
+    borderTop: "1px solid #f1f1f1",
     padding: '5px 15px',
-    display: 'inline-block',
-    fontSize: '20px'
+    fontSize: '20px',
 };
 
 const columns = [

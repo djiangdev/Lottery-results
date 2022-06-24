@@ -34,7 +34,6 @@ const OpenModal = (props) => {
                 onOk={handleOk}
                 onCancel={handleCancel}
                 width={800}
-                centered={true}
             >
                 <p>
                     Ngày xổ: <strong>{OpenTime}</strong>
