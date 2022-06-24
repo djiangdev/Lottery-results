@@ -2,7 +2,7 @@ import type { ColumnsType } from "antd/lib/table";
 import { Badge } from "antd";
 import OpenModal from "./Modal";
 
-const styles = {
+const openNum_styles = {
     border: "1px solid #cdcdcd",
     borderRadius: "50%",
     padding: "5px 15px",
@@ -60,7 +60,7 @@ const columns: ColumnsType<DataType> = [
             <>
                 {openNum?.split(",").map((item, i) => {
                     return (
-                        <span style={styles} key={i}>
+                        <span style={openNum_styles} key={i}>
                             {item}
                         </span>
                     );

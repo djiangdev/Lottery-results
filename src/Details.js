@@ -1,12 +1,14 @@
 import { Table } from "antd";
 
-const styles = {
+const ket_qua_styles = {
     borderBottom: "1px solid #cdcdcd",
     borderRight: "1px solid #cdcdcd",
     borderLeft: "1px solid #f1f1f1",
     borderTop: "1px solid #f1f1f1",
-    padding: '5px 15px',
-    fontSize: '20px',
+    padding: "3px 18px",
+    fontSize: "24px",
+    display: "inline-block",
+    margin: "5px",
 };
 
 const columns = [
@@ -14,19 +16,19 @@ const columns = [
         title: "",
         dataIndex: "ten_giai",
         key: "ten_giai",
-        width: 150,
-        align: 'center'
+        width: 200,
+        align: "center",
     },
     {
         title: "",
         dataIndex: "ket_qua",
         key: "ket_qua",
-        align: 'center',
+        align: "center",
         render: (_, { ket_qua }) => (
             <>
                 {ket_qua?.split(",").map((item, i) => {
                     return (
-                        <span style={styles} key={i}>
+                        <span style={ket_qua_styles} key={i}>
                             <strong>{item}</strong>
                         </span>
                     );
