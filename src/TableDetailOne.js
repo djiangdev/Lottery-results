@@ -35,55 +35,55 @@ const columns = [
     },
 ];
 
-let dataSource = [
-    {
-        key: 1,
-        ten_giai: "Giải Đặc Biệt",
-        ket_qua: "",
-    },
-    {
-        key: 2,
-        ten_giai: "Giải nhất",
-        ket_qua: "",
-    },
-    {
-        key: 3,
-        ten_giai: "Giải nhì",
-        ket_qua: "",
-    },
-    {
-        key: 4,
-        ten_giai: "Giải ba",
-        ket_qua: "",
-    },
-    {
-        key: 5,
-        ten_giai: "Giải tư",
-        ket_qua: "",
-    },
-    {
-        key: 6,
-        ten_giai: "Giải năm",
-        ket_qua: "",
-    },
-    {
-        key: 7,
-        ten_giai: "Giải sáu",
-        ket_qua: "",
-    },
-    {
-        key: 8,
-        ten_giai: "Giải bảy",
-        ket_qua: "",
-    },
-    {
-        key: 9,
-        ten_giai: "Giải tám",
-        ket_qua: "",
-    },
-];
-
 const TableDetailOne = (props) => {
+    let dataSource = [
+        {
+            key: 1,
+            ten_giai: "Giải Đặc Biệt",
+            ket_qua: 0,
+        },
+        {
+            key: 2,
+            ten_giai: "Giải nhất",
+            ket_qua: 0,
+        },
+        {
+            key: 3,
+            ten_giai: "Giải nhì",
+            ket_qua: 0,
+        },
+        {
+            key: 4,
+            ten_giai: "Giải ba",
+            ket_qua: 0,
+        },
+        {
+            key: 5,
+            ten_giai: "Giải tư",
+            ket_qua: 0,
+        },
+        {
+            key: 6,
+            ten_giai: "Giải năm",
+            ket_qua: 0,
+        },
+        {
+            key: 7,
+            ten_giai: "Giải sáu",
+            ket_qua: 0,
+        },
+        {
+            key: 8,
+            ten_giai: "Giải bảy",
+            ket_qua: 0,
+        },
+        {
+            key: 9,
+            ten_giai: "Giải tám",
+            ket_qua: 0,
+        },
+    ];
+
     const data = JSON.parse(props.details);
     data?.forEach((value, i) => {
         dataSource[i].key = i;
