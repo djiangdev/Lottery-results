@@ -5,6 +5,11 @@ import { Table, Button } from "antd";
 import qs from "qs";
 import Columns from "./Columns";
 
+const button_styles = {
+    marginRight: "10px",
+    marginBottom: "15px",
+};
+
 let dataSource: DataType[] = [];
 
 function App() {
@@ -59,10 +64,28 @@ function App() {
         <div className="App">
             <h1>Siêu Tốc 45 Giây | Lịch sử</h1>
 
-            <Button onClick={(e) => onChangePageSize(10, e)}>10 Lượt Xổ</Button>
-            <Button onClick={(e) => onChangePageSize(30, e)}>30 Lượt Xổ</Button>
-            <Button onClick={(e) => onChangePageSize(50, e)}>50 Lượt Xổ</Button>
-            
+            <Button
+                shape="round"
+                style={button_styles}
+                onClick={(e) => onChangePageSize(10, e)}
+            >
+                10 Lượt Xổ
+            </Button>
+            <Button
+                shape="round"
+                style={button_styles}
+                onClick={(e) => onChangePageSize(30, e)}
+            >
+                30 Lượt Xổ
+            </Button>
+            <Button
+                shape="round"
+                style={button_styles}
+                onClick={(e) => onChangePageSize(50, e)}
+            >
+                50 Lượt Xổ
+            </Button>
+
             <Table
                 dataSource={dataSource}
                 columns={Columns}
