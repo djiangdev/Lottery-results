@@ -61,7 +61,7 @@ const columns: ColumnsType<DataType> = [
                 {openNum?.split(",").map((item, i) => {
                     return (
                         <span style={openNum_styles} key={i}>
-                            {item}
+                            <strong>{item}</strong>
                         </span>
                     );
                 })}

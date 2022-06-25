@@ -35,7 +35,8 @@ const OpenModal = (props) => {
                 onOk={handleOk}
                 onCancel={handleCancel}
                 cancelText="Đóng"
-                width={800}
+                centered={true}
+                width={"100%"}
             >
                 <Alert
                     style={{ marginBottom: "30px" }}
