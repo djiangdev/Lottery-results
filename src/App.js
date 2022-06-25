@@ -1,4 +1,5 @@
 import "antd/dist/antd.min.css";
+import "./App.css"
 import React, { useState, useEffect } from "react";
 import { Table } from "antd";
 import Columns from "./Columns";
@@ -37,7 +38,7 @@ function App() {
     }, []);
     return (
         <div className="App">
-            <h1>{data.name} | Lịch sử</h1>
+            {data.name && <h1>{data.name} | Lịch sử</h1>}
             <Table
                 dataSource={dataSource}
                 columns={Columns}
