@@ -30,7 +30,6 @@ function App() {
                 const url = `https://sodo678.com/api/front/open/lottery/history/high/page?${qs.stringify(
                     pagination
                 )}`;
-
                 const response = await fetch(url);
                 const data = await response.json();
                 setLoading(false);
