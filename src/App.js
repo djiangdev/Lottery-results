@@ -26,34 +26,32 @@ function App() {
 
         if (nextPageSize) {
             setLoading(true);
-            const getData = () => {
-                fetch(
-                    `https://sodo678.com/api/front/open/lottery/history/high/page?${qs.stringify(
-                        pagination
-                    )}`
-                )
-                    .then((res) => res.json())
-                    .then((json) => {
-                        setLoading(false);
-                        dataSource = json.rows?.map((item, i) => {
-                            i = i + 1;
-                            return {
-                                key: i,
-                                no: i++,
-                                turnNum: item.turnNum,
-                                openNum: item.openNum,
-                                openTime: new Date(item.openTime),
-                                detail: `${item.openTime}|${item.turnNum}|${item.detail}`,
-                            };
-                        });
-                    });
+            const getData = async () => {
+                const url = `https://sodo678.com/api/front/open/lottery/history/high/page?${qs.stringify(
+                    pagination
+                )}`;
+
+                const response = await fetch(url);
+                const data = await response.json();
+                setLoading(false);
+                dataSource = data.rows?.map((item, i) => {
+                    i = i + 1;
+                    return {
+                        key: i,
+                        no: i++,
+                        turnNum: item.turnNum,
+                        openNum: item.openNum,
+                        openTime: new Date(item.openTime),
+                        detail: `${item.openTime}|${item.turnNum}|${item.detail}`,
+                    };
+                });
             };
 
             getData({ pagination });
         }
     }, [pagination, nextPageSize]);
 
-    const onChangePageSize = (size, event) => {
+    const onChangePageSize = (size) => {
         setPagination({
             ...pagination,
             pageSize: size,

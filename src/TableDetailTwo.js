@@ -26,7 +26,6 @@ const TableDetailTwo = (props) => {
         const arr = values?.split(",");
         arrays.push(...arr);
     });
-
     let dataSource = [
         {
             key: -1,
