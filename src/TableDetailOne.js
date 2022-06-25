@@ -1,7 +1,7 @@
 import { Table } from "antd";
 
 const ket_qua_styles = {
-    border: "1px solid #f1f1f1 !important",
+    border: "1px solid #f1f1f1",
     display: "inline-block",
     padding: "2px 18px",
     fontSize: "22px",

@@ -1,7 +1,7 @@
 import { Table } from "antd";
 
 const duoi_styles = {
-    fontSize: "20px",
+    fontSize: "22px",
 };
 
 const columns = [
