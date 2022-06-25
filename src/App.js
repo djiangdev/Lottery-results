@@ -1,4 +1,5 @@
 import "antd/dist/antd.min.css";
+import "./App.css";
 import React, { useState, useEffect } from "react";
 import { Table, Button } from "antd";
 import qs from "qs";
@@ -61,7 +62,7 @@ function App() {
             <Button onClick={(e) => onChangePageSize(10, e)}>10 Lượt Xổ</Button>
             <Button onClick={(e) => onChangePageSize(30, e)}>30 Lượt Xổ</Button>
             <Button onClick={(e) => onChangePageSize(50, e)}>50 Lượt Xổ</Button>
-
+            
             <Table
                 dataSource={dataSource}
                 columns={Columns}
